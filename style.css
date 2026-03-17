@@ -1,3 +1,11 @@
+:root {
+    --google-blue: #0b57d0;
+    --google-grey: #5f6368;
+    --bg-grey: #f8f9fa;
+    --border-color: #dadce0;
+    --text-dark: #202124;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -6,151 +14,155 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f8f9fa;
+    background-color: var(--bg-grey);
+    color: var(--text-dark);
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    height: 100vh;
-    color: #202124;
+    align-items: center;
+    min-height: 100vh;
 }
 
-.container {
+.viewport {
     width: 100%;
-    max-width: 448px;
+    max-width: 450px;
     padding: 20px;
 }
 
 .card {
     background: #ffffff;
-    border: 1px solid #dadce0;
-    border-radius: 28px;
-    padding: 48px 40px 36px;
+    border: 1px solid var(--border-color);
+    border-radius: 28px; /* Material 3 Roundedness */
+    padding: 48px 40px;
     text-align: center;
-    box-shadow: 0 1px 2px rgba(60,64,67,0.3);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 }
 
-/* Pure CSS Drive Logo */
-.logo-container {
+/* --- Pure CSS Drive Logo --- */
+.drive-logo-wrap {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 24px;
 }
 
-.drive-logo {
+.logo-shape {
     width: 40px;
-    height: 35px;
+    height: 34px;
     position: relative;
     margin-bottom: 8px;
 }
 
-.side {
+.tri-side {
     position: absolute;
-    width: 25px;
     height: 6px;
     border-radius: 2px;
 }
 
-.green { background: #34A853; transform: rotate(60deg); top: 8px; left: 0; }
-.blue { background: #4285F4; bottom: 0; left: 7px; width: 26px; }
-.yellow { background: #FBBC05; transform: rotate(-60deg); top: 8px; right: 0; }
+.yellow { background: #FBBC05; width: 24px; transform: rotate(-60deg); top: 8px; right: 0; }
+.green { background: #34A853; width: 24px; transform: rotate(60deg); top: 8px; left: 0; }
+.blue { background: #4285F4; width: 26px; bottom: 0; left: 7px; }
 
-.brand {
+.brand-name {
+    font-family: 'Google Sans', sans-serif;
     font-size: 22px;
-    color: #5f6368;
+    color: var(--google-grey);
 }
 
-h1 {
+/* --- Text Styling --- */
+.headline {
+    font-family: 'Google Sans', sans-serif;
     font-size: 28px;
     font-weight: 400;
     margin-bottom: 12px;
 }
 
-p {
+.subtext {
     font-size: 16px;
     color: #3c4043;
+    margin-bottom: 32px;
 }
 
-/* File Preview Box */
-.file-box {
+/* --- File Preview Box --- */
+.file-preview-card {
     display: flex;
     align-items: center;
     background: #f1f3f4;
     border-radius: 12px;
     padding: 16px;
-    margin: 32px 0;
+    margin-bottom: 32px;
     text-align: left;
 }
 
-.doc-icon {
+.doc-icon-css {
     width: 32px;
-    height: 40px;
+    height: 42px;
     background: #4285F4;
-    border-radius: 4px;
+    border-radius: 3px;
     position: relative;
     margin-right: 16px;
 }
 
-.doc-icon::after {
-    content: '';
+.dog-ear {
     position: absolute;
     top: 0; right: 0;
     width: 12px; height: 12px;
-    background: #adc6ff;
-    border-bottom-left-radius: 4px;
+    background: #a1c2ff;
+    border-bottom-left-radius: 3px;
 }
 
-.file-name {
-    display: block;
+.file-info .name {
     font-weight: 500;
-    font-size: 15px;
+    font-size: 14px;
+    display: block;
 }
 
-.file-meta {
-    font-size: 13px;
-    color: #5f6368;
+.file-info .meta {
+    font-size: 12px;
+    color: var(--google-grey);
 }
 
-/* Primary Button */
-.btn-primary {
-    display: inline-block;
-    background-color: #0b57d0;
+/* --- Button --- */
+.primary-button {
+    display: block;
+    background-color: var(--google-blue);
     color: white;
-    padding: 12px 32px;
+    padding: 12px 24px;
     border-radius: 100px;
     text-decoration: none;
     font-weight: 500;
     font-size: 14px;
-    margin-bottom: 24px;
+    transition: background 0.2s, box-shadow 0.2s;
 }
 
-.btn-primary:hover {
+.primary-button:hover {
     background-color: #0842a0;
-    box-shadow: 0 1px 3px rgba(60,64,67,0.3);
+    box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302), 0 1px 3px 1px rgba(60,64,67,0.149);
 }
 
-.footer {
-    font-size: 13px;
+/* --- Footer --- */
+.card-footer {
+    margin-top: 40px;
+    font-size: 12px;
+    color: var(--google-grey);
     border-top: 1px solid #f1f3f4;
     padding-top: 24px;
 }
 
-.footer a {
-    color: #0b57d0;
+.link {
+    color: var(--google-blue);
     text-decoration: none;
     font-weight: 500;
 }
 
-.bottom-nav {
+.external-links {
+    margin-top: 24px;
     display: flex;
     justify-content: center;
     gap: 24px;
-    margin-top: 24px;
 }
 
-.bottom-nav a {
-    color: #5f6368;
-    font-size: 12px;
+.external-links a {
     text-decoration: none;
+    color: var(--google-grey);
+    font-size: 12px;
 }
