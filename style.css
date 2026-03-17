@@ -1,9 +1,9 @@
 :root {
     --google-blue: #0b57d0;
-    --google-grey: #5f6368;
-    --bg-grey: #f8f9fa;
-    --border-color: #dadce0;
-    --text-dark: #202124;
+    --google-blue-hover: #0842a0;
+    --text-primary: #1f1f1f;
+    --text-secondary: #444746;
+    --border-color: #c4c7c5;
 }
 
 * {
@@ -14,155 +14,124 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: var(--bg-grey);
-    color: var(--text-dark);
+    background-color: #f8fafd;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    height: 100vh;
+    color: var(--text-primary);
 }
 
-.viewport {
+.wrapper {
     width: 100%;
-    max-width: 450px;
-    padding: 20px;
+    max-width: 448px;
+    padding: 16px;
 }
 
 .card {
     background: #ffffff;
-    border: 1px solid var(--border-color);
-    border-radius: 28px; /* Material 3 Roundedness */
-    padding: 48px 40px;
-    text-align: center;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    border-radius: 28px;
+    padding: 36px 40px;
+    box-shadow: 0 1px 2px 0 rgba(60,64,67,.3), 0 1px 3px 1px rgba(60,64,67,.15);
+    text-align: left; /* Google rarely centers main text */
 }
 
-/* --- Pure CSS Drive Logo --- */
-.drive-logo-wrap {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.drive-logo {
+    width: 40px;
     margin-bottom: 24px;
 }
 
-.logo-shape {
-    width: 40px;
-    height: 34px;
-    position: relative;
-    margin-bottom: 8px;
-}
-
-.tri-side {
-    position: absolute;
-    height: 6px;
-    border-radius: 2px;
-}
-
-.yellow { background: #FBBC05; width: 24px; transform: rotate(-60deg); top: 8px; right: 0; }
-.green { background: #34A853; width: 24px; transform: rotate(60deg); top: 8px; left: 0; }
-.blue { background: #4285F4; width: 26px; bottom: 0; left: 7px; }
-
-.brand-name {
+h1 {
     font-family: 'Google Sans', sans-serif;
-    font-size: 22px;
-    color: var(--google-grey);
-}
-
-/* --- Text Styling --- */
-.headline {
-    font-family: 'Google Sans', sans-serif;
-    font-size: 28px;
+    font-size: 24px;
     font-weight: 400;
     margin-bottom: 12px;
 }
 
-.subtext {
-    font-size: 16px;
-    color: #3c4043;
-    margin-bottom: 32px;
+.subtitle {
+    font-size: 14px;
+    color: var(--text-secondary);
+    line-height: 20px;
+    margin-bottom: 24px;
 }
 
-/* --- File Preview Box --- */
-.file-preview-card {
+.file-card {
     display: flex;
     align-items: center;
-    background: #f1f3f4;
+    background: #f0f4f9;
     border-radius: 12px;
     padding: 16px;
-    margin-bottom: 32px;
-    text-align: left;
+    margin-bottom: 28px;
 }
 
-.doc-icon-css {
+.doc-icon {
     width: 32px;
-    height: 42px;
-    background: #4285F4;
-    border-radius: 3px;
-    position: relative;
-    margin-right: 16px;
+    height: 32px;
+    margin-right: 12px;
 }
 
-.dog-ear {
-    position: absolute;
-    top: 0; right: 0;
-    width: 12px; height: 12px;
-    background: #a1c2ff;
-    border-bottom-left-radius: 3px;
-}
-
-.file-info .name {
-    font-weight: 500;
+.file-title {
     font-size: 14px;
-    display: block;
+    font-weight: 500;
+    color: var(--text-primary);
 }
 
-.file-info .meta {
+.file-type {
     font-size: 12px;
-    color: var(--google-grey);
+    color: var(--text-secondary);
+    margin-top: 2px;
 }
 
-/* --- Button --- */
-.primary-button {
-    display: block;
+.button-container {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.btn-primary {
     background-color: var(--google-blue);
-    color: white;
-    padding: 12px 24px;
+    color: #ffffff;
+    padding: 10px 24px;
     border-radius: 100px;
     text-decoration: none;
-    font-weight: 500;
     font-size: 14px;
-    transition: background 0.2s, box-shadow 0.2s;
+    font-weight: 500;
+    transition: background-color 0.2s;
 }
 
-.primary-button:hover {
-    background-color: #0842a0;
-    box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302), 0 1px 3px 1px rgba(60,64,67,0.149);
+.btn-primary:hover {
+    background-color: var(--google-blue-hover);
 }
 
-/* --- Footer --- */
-.card-footer {
-    margin-top: 40px;
+.divider {
+    height: 1px;
+    background-color: #e3e3e3;
+    margin: 28px 0;
+}
+
+.abuse-report {
     font-size: 12px;
-    color: var(--google-grey);
-    border-top: 1px solid #f1f3f4;
-    padding-top: 24px;
+    color: var(--text-secondary);
 }
 
-.link {
+.abuse-report a {
     color: var(--google-blue);
     text-decoration: none;
     font-weight: 500;
 }
 
-.external-links {
-    margin-top: 24px;
+.legal-footer {
     display: flex;
     justify-content: center;
     gap: 24px;
+    margin-top: 24px;
 }
 
-.external-links a {
-    text-decoration: none;
-    color: var(--google-grey);
+.legal-footer a {
     font-size: 12px;
+    color: var(--text-secondary);
+    text-decoration: none;
+}
+
+.legal-footer a:hover {
+    text-decoration: underline;
 }
